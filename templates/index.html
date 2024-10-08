@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Slot Mahjong</title>
+</head>
+<body>
+    <h1>Mahjong</h1>
+    <div class="slot-machine">
+        {% if results %}
+            <div class="result">
+                <h2>Hasil:</h2>
+                <p>{{ results[0] }} {{ results[1] }} {{ results[2] }}</p>
+            </div>
+        {% endif %}
+        <a href="{{ url_for('spin') }}" class="spin-button">spin-button</a>
+    </div>
+</body>
+</html>
